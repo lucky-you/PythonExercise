@@ -2,6 +2,7 @@
 
 import requests
 import os
+from bs4 import BeautifulSoup
 
 
 def getHTMLText(url):
@@ -16,7 +17,7 @@ def getHTMLText(url):
 
 def downLoadImage(url):
     root = "D://pics//"
-    path = root + url.split("-")[1] + ".jpg"
+    path = root + url.split("_")[1] + ".jpg"
     try:
         if not os.path.exists(root):
             os.makedirs(root)
@@ -33,6 +34,21 @@ def downLoadImage(url):
         return "爬取错误了"
 
 
+def getResponse(url):
+    r = requests.get(url)
+    r.encoding = r.apparent_encoding
+    demo = r.text
+    return demo
+
+
+def bs4TextHtml():
+    url = "https://www.icourse163.org/"
+    soup = BeautifulSoup(getResponse(url), "html.parser")
+    # print(soup.prettify())
+    print(soup.a.prettify())
+
+
 if __name__ == '__main__':
-    url = "http://hbimg.b0.upaiyun.com/bc18f16be6a599d2649b645ece7b7300d281853b87f93-TxNHuG_fw658"
-    downLoadImage(url)
+    # url = "http://hbimg.b0.upaiyun.com/bc18f16be6a599d2649b645ece7b7300d281853b87f93-TxNHuG_fw658"
+    # downLoadImage(url)
+    bs4TextHtml()
