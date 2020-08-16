@@ -7,7 +7,5 @@ class Dog:
         print("小狗要跑。。。")
 
 
-
-
 if __name__ == '__main__':
     Dog.run()

@@ -1,6 +1,5 @@
 # python 中多继承的使用
 
-
 class A:
     def text(self):
         print("A的text方法")

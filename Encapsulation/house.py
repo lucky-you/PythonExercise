@@ -36,7 +36,6 @@ class House:
 
 def startMain():
     # 创建家具
-    print("开始创建家具***\n")
     bed = HouseItem("席梦思", 12.0)
     chest = HouseItem("衣柜", 13.0)
     table = HouseItem("餐桌", 7.6)
