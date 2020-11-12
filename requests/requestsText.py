@@ -10,8 +10,7 @@ from bs4 import BeautifulSoup
 
 
 def requestText():
-
-    urlSnas="http://news.sina.com.cn/photo/rel/csjsy07/399/"
+    urlSnas = "http://news.sina.com.cn/photo/rel/csjsy07/399/"
     r = requests.get(urlSnas)
     r.encoding = r.apparent_encoding
     text = r.text
