@@ -17,9 +17,3 @@ def requestText():
     r.encoding = r.apparent_encoding
     text = r.text
     soup = BeautifulSoup(text, "html.parser")
-    # a = soup.find_all('img', {'class': 'cover'})
-    print(soup)
-    # for i in a:
-    #     url = i['src']
-    #     print(url)
-    #     # saveImage(url)
