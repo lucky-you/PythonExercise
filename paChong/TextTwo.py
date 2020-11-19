@@ -1,7 +1,7 @@
 # encoding  : utf-8
 # Author    : zhoBin
 # Datetime  : 2020/5/16 9:28
-# File      : requestsText.py
+# File      : TextTwo.py
 # explain   : 爬取图片并保存到本地
 import os
 
@@ -39,7 +39,6 @@ def saveImage(url):
             print("文件已存在")
     except:
         return "爬取错误了"
-
 
 if __name__ == '__main__':
     requestText()
